@@ -22,7 +22,6 @@ h6 {
   letter-spacing: 4px;
 }
 
-
 nav {
   background: #fbeee6;
   height: 20em;
@@ -72,7 +71,7 @@ nav ul li a:active {
 .topnav {
   display: flex;
   flex-direction: row;
-  padding: 0 3em 0 3em;
+  padding: 0 1em 0 1em;
 }
 
 #logo {
@@ -85,24 +84,24 @@ nav ul li a:active {
 
 body {
   background: #fbeee6;
-  display: flex;
-  flex-wrap: wrap;
+  display: block;
+  /* flex-wrap: wrap;
   flex-direction: row;
   justify-content: center;
   align-items: center;
-  margin: 0;
+  margin: 0; */
 }
 
 .herosection h1 {
-  font-size: 3.5em;
+  font-size: 3em;
   line-height: 1em;
   margin-bottom: 0.5em;
   margin-top: 4em;
 }
 
 #subheading {
-    font-family: "Montserrat", sans-serif;
-    font-size: 2em;
+  font-family: "Montserrat", sans-serif;
+  font-size: 2em;
 }
 
 .herosection p,
@@ -119,7 +118,16 @@ div p {
   align-self: top;
   right: 100px;
   padding-top: 0px;
+  /* transition: 5s; add animation to make disc roll */
+}
 
+#featurecircle {
+  width: 150%;
+  position: absolute;
+  z-index: -1;
+  align-self: top;
+  right: 100px;
+  padding-top: 0px;
   /* transition: 5s; add animation to make disc roll */
 }
 
@@ -129,7 +137,7 @@ div {
 }
 
 .textsection h1 {
-    line-height: 2em;
+  line-height: 2em;
 }
 
 .textsection h2 {
@@ -137,28 +145,27 @@ div {
   line-height: 2em;
 }
 
-
 .textsection p {
   font-size: 1em;
 }
 
 .textsection {
-    padding: 4em 3em 4em 3em;
+  padding: 4em 3em 4em 3em;
 }
 
-
 #whitecircle {
-    position: absolute;
-    z-index: -1;
-    width: 70%;
-    padding-top: 150px;
-    left: 230px;
+  position: absolute;
+  z-index: -2;
+  width: 130%;
+  padding-top: 150px;
+  left: 230px;
+  align-self: top;
 }
 
 .contactinfo {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
 }
 
 footer {
@@ -169,7 +176,56 @@ footer {
   padding: 2em;
 }
 
-/* PROJECTS PAGE STYLING */
+/* BLOG PAGE STYLING  */
+
+.blogpost {
+  background: rgb(255, 255, 255);
+  padding: 3em;
+  margin: 0.3em;
+  margin-bottom: 8em;
+}
+
+.blogpost img {
+  width: 60vw;
+  padding-top: 1em;
+  padding-bottom: 2em;
+}
+
+.blogpost h2 {
+  font-size: 4em;
+}
+
+.blogpost p {
+  font-size: 0.8em;
+}
+
+.bloglist {
+  display: flex;
+  flex-direction: column;
+}
+
+.blogtitles ul li a {
+  font-family: "Montserrat", sans-serif;
+  color: black;
+  text-decoration: underline;
+}
+
+/* ABOUT PAGE  */
+
+#abouthero {
+  padding-top: 8em;
+}
+
+#abouthero h1 {
+  padding-bottom: 1em;
+  margin: 0;
+}
+
+#abouthero p {
+  font-size: 1em;
+}
+
+/* PROJECTS PAGE */
 
 #plant {
   width: 300px;
@@ -177,121 +233,130 @@ footer {
   /* top: 300px; */
 }
 
-/* ABOUT PAGE  */
-
-#abouthero {
-    padding-top: 8em;
-}
-
-#abouthero h1 {
-    padding-bottom: 1em;
-    margin: 0;
-}
-
-#abouthero p {
-    font-size: 1em;
-}
-
-/* PROJECTS PAGE */
-
 .project {
-    background:rgb(255, 255, 255);
-    padding: 3em;
-    margin: 0.3em;
-    margin-bottom: 8em;
+  background: rgb(255, 255, 255);
+  padding: 3em;
+  margin: 0.3em;
+  margin-bottom: 8em;
 }
 
 .project {
-    text-align: center;
+  text-align: center;
 }
 
 .project img {
-    width: 60vw;
+  width: 60vw;
 }
 
 .project p {
-    margin: 2em;
-    margin-top: 0.5em;
-    margin-bottom: 0.5em;
+  font-size: 1em;
+  margin: 2em;
+  margin-top: 0.5em;
+  margin-bottom: 0.5em;
+}
+
+.project a {
+  text-decoration: underline;
 }
 
 .project h2 {
-    font-weight: bold;
+  font-weight: bold;
 }
 
 .project h3 {
-    line-height: 3em;
-    font-size: 2em;
-    font-weight: bold;
-    font-style:italic;
+  line-height: 3em;
+  font-size: 2em;
+  font-weight: bold;
+  font-style: italic;
 }
-
 
 /* rules for when it changes to tablet */
 @media only screen and (min-width: 400px) and (max-width: 899px) {
   /* turn nav items back into one row and make their font smaller */
-#logo {
+  #logo {
     /* float: left; */
-    display:inline-block;
+    display: inline-block;
     width: 180px;
-  padding-left: 3em;
-  padding-bottom: 1em;
-  padding-top: 3em;
-}
+    padding-left: 3em;
+    padding-bottom: 1em;
+    padding-top: 3em;
+  }
 
-nav ul {
-        display: in-line;
-        display: flex;
-        flex-direction: row;
-        width: 70%;
-        /* padding-top: 6em; */
-    }
+  nav ul {
+    display: in-line;
+    display: flex;
+    flex-direction: row;
+    width: 70%;
+    /* padding-top: 6em; */
+  }
 
-    nav ul li {
-        flex-direction: row;
-        font-size: 0.8em;
-    }
-
+  nav ul li {
+    flex-direction: row;
+    font-size: 0.8em;
+  }
 }
 
 /* rules for when it changes to desktop */
 @media only screen and (min-width: 900px) {
   /* nav items back into one row with bigger font */
-    #logo {
-        float: left;
-        padding: 1.5em;
-        padding-left: 3em;
-        padding-right: 0;
-        position: absolute;
-        width: 180px;
-    }
+  #logo {
+    float: left;
+    padding: 1.5em;
+    padding-left: 3em;
+    padding-right: 0;
+    position: absolute;
+    width: 180px;
+  }
 
-    nav ul {
-        display: inline;
-        display: flex;
-        flex-direction: row;
-        justify-content: right;
-        width: 70%;
-        padding-top: 6em;
-        padding-right: 4em;
-    }
+  nav ul {
+    display: inline;
+    display: flex;
+    flex-direction: row;
+    justify-content: right;
+    width: 70%;
+    padding-top: 6em;
+    padding-right: 4em;
+  }
 
-    nav ul li {
-        flex-direction: row;
-        font-size: 1em;
-    }
+  nav ul li {
+    flex-direction: row;
+    font-size: 1em;
+  }
 
-    nav ul li a {
+  nav ul li a {
     padding: 0;
-    }
-    
-    .topnav {
-        padding: 0;
-        justify-content: flex-end;
-        float: right;
-        display: flex;
-        flex-direction: row;
+  }
 
-    }
+  .topnav {
+    padding: 0;
+    justify-content: flex-end;
+    float: right;
+    display: flex;
+    flex-direction: row;
+  }
 
+  #whitecircle {
+    width: 100%;
+    padding-top: 150px;
+    left: 800px;
+  }
+
+  #featurecircle {
+    width: 100%;
+    right: 500px;
+  }
+
+  .bloglist {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+
+  .blogpost {
+    width: 500px;
+  }
+
+  .blogpost img {
+    width: 300px;
+  }
 }
